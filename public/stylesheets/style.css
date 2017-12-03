@@ -1,0 +1,107 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #ff0000;
+}
+
+#happy {
+	margin-top: 200px;
+    overflow: hidden;
+    width: 150px;
+    height: 0;
+    margin-left: 250px;
+    margin-right: 10px;
+    background-color: #FFFD7F;
+    transform: rotatex(180deg);
+    transform-origin: top;
+    float:left;
+}
+
+#sadness {
+  margin-top: 200px;
+  margin-right: 300 px;
+    overflow: hidden;
+    width: 150px;
+    height: 0;
+    background-color: #6E99F8;
+    transform: rotatex(180deg);
+    transform-origin: top;
+    margin-right: 10px;
+    float: left
+}
+
+#anger {
+  margin-top: 200px;
+  margin-right: 300 px;
+    overflow: hidden;
+    width: 150px;
+    height: 0;
+    background-color: #EE7198;
+    transform: rotatex(180deg);
+    transform-origin: top;
+    margin-right: 10px;
+    float: left
+}
+
+#disgust {
+  margin-top: 200px;
+  margin-right: 300 px;
+    overflow: hidden;
+    width: 150px;
+    height: 0;
+    background-color: #B1FB7B;
+    transform: rotatex(180deg);
+    transform-origin: top;
+    margin-right: 10px;
+    float: left
+}
+
+#fear {
+  margin-top: 200px;
+  margin-right: 300 px;
+    overflow: hidden;
+    width: 150px;
+    height: 0;
+    background-color: #B792C8;
+    transform: rotatex(180deg);
+    transform-origin: top;
+    margin-right: 10px;
+    float: left
+}
+
+#circle{
+  width: 50px;
+  height: 50px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  background: red;
+}
+
+textarea {
+  width: 60%;
+  height: 40%;
+  font-size: 20px;
+  border:2px solid #456879;
+  border-radius:10px;
+
+}
+
+.center {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.center-button {
+    margin-left: 600px;
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+    background: #BBE349;
+    font-size: 15px;
+    border-radius:10px;
+}
+}

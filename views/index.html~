@@ -1,0 +1,100 @@
+<html>
+
+<link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+<img src="empathee.png" alt="logo" style="margin-left:300px;width:656px;height:192px;">
+<form action="/" method="post">
+
+  <textarea class= "center" id="message" name="message" type="text" value="" placeholder="Enter text to analyze feelings..."></textarea><br/>
+  <input class= "center-button" type="submit" value="Analyze"/>
+</form>
+
+<form action="/" method = "post">
+	<input class = "center-button" type = "submit" value="Speak"/>
+
+</form>
+<p style="margin-left:550px; margin-top:50px; font-size: 20px"; id = "hide"><big> emotions detected...</big> </p>
+<script>$("hide").hide();</script>
+<div id="happy"></div>
+<div id="sadness"></div>
+<div id="anger"></div>
+<div id="disgust"></div>
+<div id="fear"></div>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.slim.js"
+  integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg="
+  crossorigin="anonymous"></script>
+
+
+<script>  
+
+  var joy = <%- JSON.stringify(joy) %>;
+  var sadness = <%- JSON.stringify(sadness) %>;
+  var anger = <%- JSON.stringify(anger) %>;
+  var disgust = <%- JSON.stringify(disgust) %>;
+  var fear = <%- JSON.stringify(fear) %>;
+
+  var fill_happy = 0;
+  var fill_sadness = 0;
+  var fill_anger = 0;
+  var fill_disgust = 0;
+  var fill_fear = 0;
+
+  $("p").show(1000);
+
+    var update = setInterval(function() {
+      fill_happy += 1;
+      if (fill_happy <= joy*200) {
+        $('#happy').css('height', (fill_happy+"px")); 
+        } 
+      else {
+        clearInterval(update);        
+      }
+    }, 10);
+
+    var update2 = setInterval(function() {
+      fill_sadness += 1;
+      if (fill_sadness <= sadness*200) {
+        $('#sadness').css('height', (fill_sadness+"px")); 
+        } 
+      else {
+        clearInterval(update2);        
+      }
+    }, 10);
+
+    var update3 = setInterval(function() {
+      fill_anger += 1;
+      if (fill_anger <= anger*200) {
+        $('#anger').css('height', (fill_anger+"px")); 
+        } 
+      else {
+        clearInterval(update3);        
+      }
+    }, 10);
+
+    var update4 = setInterval(function() {
+      fill_disgust += 1;
+      if (fill_disgust <= disgust*200) {
+        $('#disgust').css('height', (fill_disgust+"px")); 
+        } 
+      else {
+        clearInterval(update4);        
+      }
+    }, 10);
+
+    var update5 = setInterval(function() {
+      fill_fear += 1;
+      if (fill_fear <= fear*200) {
+        $('#fear').css('height', (fill_fear+"px")); 
+        } 
+      else {
+        clearInterval(update5);        
+      }
+    }, 10);
+
+
+    console.log(joy, sadness, anger, disgust, fear);
+
+</script>
+</html>
+
